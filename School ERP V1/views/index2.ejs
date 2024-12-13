@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index2.css">
+</head>
+<body>
+    <button id="btn-print" onclick="handler()">print</button>
+    <div class="head">
+        <img src="/Asset/logo.ico" class="logo">
+        <h1>AADHARSHILA SCHOOL</h1>
+        <h5>Roots to wings</h5>
+        <h6>BAJAJ ROAD SIKAR, RAJASTHAN 332001</h6>
+        <h3>ADDMISSION LETTER</h3>
+        <hr>
+    </div>
+
+    <section>
+        <% function convert(str) {%>
+            <%var date = new Date(str)%>
+              <%mnth = ("0" + (date.getMonth() + 1)).slice(-2)%>
+              <%day = ("0" + date.getDate()).slice(-2)%>
+            <%return [ day, mnth, date.getFullYear()].join("-");%>
+        <%};%>
+        <%const A_date = date_of_addmission;%>
+        <% const B_date = date_of_birth %>
+        <div class="student_details">
+            <h4>Student Name:- <span id="h4_span"><%=student_name%></span></h4>
+            <h4>Registration No:- <span id="h4_span"><%=registration_no%></span></h4>
+            <h4>Class:- <span id="h4_span"><%=class_name%></span></h4>
+            <h4>Date Of Addmission:- <span id="h4_span"><%=convert(A_date)%></span></h4>
+            <h4>Date Of Birth:- <span id="h4_span"><%=convert(B_date)%></span></h4>
+            <h4>Address:- <span id="h4_span"><%=address%></span></h4>
+            <h4>Gender:- <span id="h4_span"><%=gender%></span></h4>
+            <h4>Cast:- <span id="h4_span"><%=cast_of_student%></span></h4>
+            <h4>Father Name:- <span id="h4_span"><%=father_name%></span></h4>
+            <h4>Father Mobile No:- <span id="h4_span"><%=father_mobile_no%></span></h4>
+            <h4>Father Occupation:- <span id="h4_span"><%=father_occupation%></span></h4>
+            <h4>Mother Name:- <span id="h4_span"><%=mother_name%></span></h4>
+            <h4>Mother Mobile No:- <span id="h4_span"><%=mother_mobile_no %></span></h4>
+            <h4>Mother Occupation:- <span id="h4_span"><%=mother_occupation%></span></h4>
+            <h4>Discount In Fees:- <span id="h4_span"><%=discount_fees%>%</span></h4>
+        </div>
+        
+        <div id="SoA">
+            Signature of Authority______________
+        </div>
+        <div id="IS">
+            Institue Stamp______________
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    <script>
+        function handler() {
+        document.getElementById("btn-print").setAttribute("hidden", true);
+        document.getElementById("btn-print").click(window.print());
+        document.getElementById("btn-print").removeAttribute("hidden");
+        }
+    </script>
+</body>
+</html>

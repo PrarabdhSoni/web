@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addmission Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Addmission_form.css">
+</head>
+<body>
+    <%- include("sidebar.ejs") %>
+    <h2>ADDMISSION FORM</h2>
+    <section>
+        <div>
+            <form action="/addmission" method="post" class="form_head">
+                <%const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']%>
+                <%const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']%>
+                <%const symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']%>
+                <% let password = [] %>
+                <% for (let i = 0; i < 4; i++) { %>
+                    <% password += letters[Math.floor(Math.random() * letters.length)]; %>
+                <% } %>
+                <% for (let i = 0; i < 4; i++) { %>
+                    <% password += numbers[Math.floor(Math.random() * numbers.length)]; %>
+                <% } %>
+                <%var shuffled = password.split('').sort(function(){return 0.5-Math.random()}).join('');%>
+
+                <label for="Student_Name" class="form_label">Student Name*</label>
+                <input type="text" id="form_input" name="Student_Name" autocomplete="off" required>
+                <label for="Registration_Number" class="form_label">Registration Number*</label>
+                <input type="number" id="form_input" name="Registration_Number"autocomplete="off" required>
+                <label for="Class" class="form_label">Class*</label>
+                <input type="text" id="form_input" name="class" required>
+                <label for="Date_Of_Addmission" class="form_label">Date Of Addmission*</label>
+                <input type="date" id="form_input" name="Date_Of_Addmission" autocomplete="off" required>
+                <label for="Picture" class="form_label">Picture</label>
+                <input type="file" id="form_input"autocomplete="off" name="Picture" style="background-color: white;">
+                <label for="Discount_In_Fees" class="form_label" >Discount In Fees*</label>
+                <input type="number" id="form_input" name="Discount_In_Fees" autocomplete="off" required>
+                <label for="Date_Of_Birth" class="form_label">Date Of Birth</label>
+                <input type="date" id="form_input" name="Date_Of_Birth"autocomplete="off">
+                <label for="Gender" class="form_label">Gender</label>
+                <input type="text" id="form_input" name="Gender"autocomplete="off">
+                <label for="Address" class="form_label">Address</label>
+                <input type="text" id="form_input" name="Address"autocomplete="off">
+                <label for="Cast" class="form_label">Cast</label>
+                <input type="text" id="form_input" name="Cast"autocomplete="off">
+                <label for="Father_Name" class="form_label">Father Name</label>
+                <input type="text" id="form_input" name="Father_Name"autocomplete="off">
+                <label for="Father_Mobile_No." class="form_label" aria-placeholder="Father Mobile No.">Father Mobile No.</label>
+                <input type="tel" id="form_input" name="Father_Mobile_No."autocomplete="off">
+                <label for="Father_Occupation" class="form_label" aria-placeholder="Father Occupation">Father Occupation</label>
+                <input type="text" id="form_input" name="Father_Occupation"autocomplete="off">
+                <label for="Mother_Name" class="form_label">Mother Name</label>
+                <input type="text" id="form_input" name="Mother Name"autocomplete="off">
+                <label for="Mobile_No." class="form_label" aria-placeholder="Mother Mobile No.">Mother Mobile No.</label>
+                <input type="tel" id="form_input" name="Mobile_No."autocomplete="off">
+                <label for="Occupation" class="form_label" aria-placeholder="Mother Occupation">Mother Occupation</label>
+                <input type="text" id="form_input" name="Occupation"autocomplete="off">
+                <label for="password" class="form_label">Password</label>
+                <input type="text" id="form_input" name="password" value="<%= shuffled %>"autocomplete="off">
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

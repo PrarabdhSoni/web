@@ -1,0 +1,75 @@
+html{
+    @media (min-width:600px) {
+        /* background-color: #8BC6EC;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+        background-color: #c3d7ff;
+    }
+    @media (max-width:600px) {
+        background-color: #c3d7ff;
+    }
+}
+h2{
+    font-family: "Roboto", sans-serif;
+    text-shadow: 2px 2px black;
+    padding-top: 20px;
+    text-align: center;
+    margin: auto;
+    color: aliceblue;
+    font-size: 40px;
+
+}
+
+.form_label{
+    display: inline-block;
+    background-image: linear-gradient(43deg, #0F2027 0%, #203A43 46%, #2C5364 100%);
+    color: white;
+    border-radius: 120px;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px black;
+    margin-right: 10px;
+    @media (max-width:600px) {
+        margin-top: 20px;
+    }
+}
+#form_input{
+    display: inline-block;
+    border-radius: 120px;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+.form_head{
+    @media (min-width:600px) {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;  
+        gap: 40px 20px;
+    }
+    @media (max-width: 600px) {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+#submit{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: center;
+    margin: auto;
+    border-radius: 120px;
+    border: none;
+    padding:10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: navy;
+    color: white;
+    text-shadow: 1px 1px black;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @media (max-width:600px) {
+        margin-top: 40px;
+    }
+}

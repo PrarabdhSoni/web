@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Software</title>
+    <style>
+        html{
+            background-color: #c3d7ff;
+        }
+        #id{
+            padding: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+            text-align: center;
+            border-radius: 120px;
+            border: none;
+        }
+        h2{
+            padding-top: 80px;
+            color: white;
+            text-shadow: 2px 2px black;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+        }
+        .btn{
+            text-align: center;
+            margin: auto;
+            border-radius: 120px;
+            border: none;
+            padding:10px;
+            padding-right: 50px;
+            padding-left: 50px;
+            background-color: navy;
+            color: white;
+            text-shadow: 2px 2px black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <%- include("sidebar.ejs") %>
+    <form action="/Addmission" method="get">
+        <h2>ADD NEW STUDENT:-</h2>
+        <button id="Addmission_form" class="btn" type="submit">Addmission form</button>
+    </form>
+    <form action="/print" method="get">
+        <h2>ADDMISSION LETTER:-</h2>
+        <input type="text" name="id" id="id" placeholder="Registration Number" autocomplete="off"/>
+        <button type="submit" class="btn">Addmission letter</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello, Detectives </h1>
+
+  <%! var result = ""; %> <% if (locals.run){%>
+    <%const elements = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];%>
+    <%ID %=26;%>
+    <%for (letter in Message){%>
+      <%if (letter in elements){%>
+        <%const pos = elements.indexOf(letter);%>
+        <%if (Direction === "encoded"){%>
+          <%const new_pos = pos + ID;%>
+          <%result += elements[new_pos];%>
+        <%}else if (Direction === "decode"){%>
+          <%const new_pos = pos - ID%>
+          <%result += elements[new_pos];%>
+        <%}%>
+      <%}else{%>
+        <% result += letter;%>
+      <%}%>
+    <%}%>
+    <p>Your Encoded/Decoded Message: <%= result %></p> 
+  <%}else{%>
+    <form action="/submit" method="POST">
+      <label for="direction">encode/decode</label>
+      <input type="text" name="direction" required>
+      <label for="message">message</label>
+      <input type="text" name="message" required>
+      <label for="id">ID</label>
+      <input type="number" name="id" required>
+      <input type="submit" value="Submit">
+    </form>
+  <%}%>
+</body>
+</html>

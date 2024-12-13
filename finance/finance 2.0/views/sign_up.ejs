@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card" style="height: 90vh;">
+        <img src="./login page logo.png" class="logo">
+
+        <form class="form" action="/Sign_Up/dashboard" method="post">
+            <label for="user_Name"></label>
+            <input type="text" id="form_input" name="user_Name" autocomplete="off" required placeholder="Name">
+            <label for="user_email"></label>
+            <input type="email" id="form_input" name="user_email" autocomplete="off" required placeholder="Email">
+            <label for="user_Phone"></label>
+            <input  id="form_input" name="user_Phone" autocomplete="off" required placeholder="Phone">
+            <label for="user_Password"></label>
+            <input type="password" id="form_input" name="user_Password" autocomplete="off" required placeholder="Password">
+            <button class="submit" type="submit">Sign up</button>  
+        </form>
+        <a href="/"><button class="sign_up">Log In</button></a>
+        <a href=""><button class="forget_pass">Home</button></a>
+    </div>
+</body>
+</html>

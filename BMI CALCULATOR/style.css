@@ -1,0 +1,28 @@
+*{
+    background-color: navy;
+    text-align: center;
+    margin: auto;
+    vertical-align: auto;
+}
+h1{
+    margin-top: 100px;
+    color: white;
+    font-size: 60px;
+    margin-bottom: 150px;
+}
+#_input{
+    background-color: white;
+    padding: 10px;
+    border-radius: 90px;
+    color: black;
+}
+#_label{
+    font-size: 30px;
+    color: white;
+}
+#_submit{
+    background-color: white;
+    padding: 10px;
+    border-radius: 90px;
+    color: black;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <h1> Welcome to BMI Calculaor </h1>
+    <form action="/submit" method="POST">
+        <label for="height" id="_label">Height in m:</label>
+        <input type="number" step="0.01" placeholder="height" id="_input" name="height" required>
+        <label for="weight" id="_label">Weight in kg:</label>
+        <input type="number" step="0.01" placeholder="weight" id="_input" name="weight" required>
+        <input type="submit" value="Submit" id="_submit">
+    </form>
+</body>
+</html>

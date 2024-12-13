@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="center-me">
+    <h1>Password Generator</h1>
+    <form action="/submit" method="POST">
+      <div class="table">
+        <label for="number">Total Number</label>
+        <input type="number" autocomplete="off" name="number" class="input">
+      </div>
+      <div class="table">
+        <label for="letter">Total Letters</label>
+        <input type="number" autocomplete="off" name="letter" class="input">
+      </div>
+      <div class="table">
+        <label for="Symbols">Total Symbols</label>
+        <input type="number" autocomplete="off" name="symbols" class="input">
+      </div>
+      <div class="table">
+        <input type="submit" value="Submit" id="copyButton">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
